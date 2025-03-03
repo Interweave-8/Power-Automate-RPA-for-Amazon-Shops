@@ -1,0 +1,15 @@
+BLOCK 错误
+ON BLOCK ERROR
+    CALL 输出日志
+    THROW ERROR
+END
+    CALL 获取文件以及初始化
+    CALL 打开Excel并将数据导入
+    CALL 将多个表进行合并
+    CALL 汇总表数据处理
+    CALL 引入SKU对照表内容
+    CALL 在汇总表添加SKU对照表的部分内容
+    CALL 生成数据透视表
+    CALL 调整数据透视表
+    CALL 保存并且退出
+END

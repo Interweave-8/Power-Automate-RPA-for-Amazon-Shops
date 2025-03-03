@@ -1,0 +1,19 @@
+# 选择文件
+Text.AppendLine Text: $'''D:\\AmazonData''' LineToAppend: $'''''' Result=> 初始文件路径
+SET 初始文件路径 TO $'''D:\\AmazonData'''
+SET SKU对照表txt文件名 TO $'''SKU对照表.txt'''
+SET SKU对照表 TO $'''%初始文件路径%\\%SKU对照表txt文件名%'''
+IF (Folder.IfFolderExists.Exists Path: 初始文件路径) THEN
+    IF (File.IfFile.Exists File: SKU对照表) THEN
+        File.Delete Files: SKU对照表
+    END
+    Folder.GetFiles Folder: 初始文件路径 FileFilter: $'''*''' IncludeSubfolders: False FailOnAccessDenied: True SortBy1: Folder.SortBy.NoSort SortDescending1: False SortBy2: Folder.SortBy.NoSort SortDescending2: False SortBy3: Folder.SortBy.NoSort SortDescending3: False Files=> 已选择的文件
+    IF 已选择的文件.Count < 1 THEN
+        Display.ShowMessageDialog.ShowMessage Title: $'''文件夾''' Message: $'''文件夾内不存在文件''' Icon: Display.Icon.ErrorIcon Buttons: Display.Buttons.OK DefaultButton: Display.DefaultButton.Button1 IsTopMost: True
+        EXIT Code: 0 ErrorMessage: $'''文件夾内不存在文件'''
+    END
+END
+IF (Folder.IfFolderExists.DoesNotExist Path: 初始文件路径) THEN
+    Display.ShowMessageDialog.ShowMessage Title: $'''文件路径不存在''' Message: $'''存放文件的位置%初始文件路径%不存在！''' Icon: Display.Icon.ErrorIcon Buttons: Display.Buttons.OK DefaultButton: Display.DefaultButton.Button1 IsTopMost: True
+    EXIT Code: 0 ErrorMessage: $'''存放文件的位置%初始文件路径%不存在！'''
+END

@@ -1,0 +1,6 @@
+Excel.SetActiveWorksheet.ActivateWorksheetByIndex Instance: Excel实例一 Index: 1
+Excel.RenameWorksheet.RenameWorksheetWithIndex Instance: Excel实例一 Index: 1 NewName: $'''SKU对照表'''
+Excel.SetActiveWorksheet.ActivateWorksheetByIndex Instance: Excel实例一 Index: 2
+Excel.InsertColumn Instance: Excel实例一 Column: $'''M'''
+Excel.WriteToExcel.WriteCell Instance: Excel实例一 Value: $'''sku-info''' Column: $'''M''' Row: 1
+Excel.WriteToExcel.WriteCell Instance: Excel实例一 Value: $'''=VLOOKUP(L2,SKU对照表!$A:$F,3,FALSE)&CHAR(10)&VLOOKUP(L2,SKU对照表!$A:$F,4,FALSE)&CHAR(10)&VLOOKUP(L2,SKU对照表!$A:$F,5,FALSE)&CHAR(10)&VLOOKUP(L2,SKU对照表!$A:$F,6,FALSE)''' Column: $'''M''' Row: 2
