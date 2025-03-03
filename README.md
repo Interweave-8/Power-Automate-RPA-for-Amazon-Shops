@@ -1,3 +1,5 @@
+# Power-Automate-RPA-for-Amazon-Shops
+
 #### 解决方案概述
 
 本方案利用Power Automate实现的RPA（机器人流程自动化），专为亚马逊平台上的多店铺管理者设计。它能够自动处理数据汇总、提取，并生成数据透视表，同时支持通过SKU自动匹配并填充单位内部数据库中的相关信息。
@@ -11,7 +13,4 @@
 #### 应用价值
 
 该解决方案旨在帮助亚马逊从业者减轻日常工作负担，显著提高工作效率。通过自动化处理重复性任务，释放更多时间和精力专注于需要更高层次思考和决策的工作内容，从而推动业务增长和创新。# Power-Automate-RPA-for-Amazon-Shops
-# Power-Automate-RPA-for-Amazon-Shops
-# Power-Automate-RPA-for-Amazon-Shops
-# Power-Automate-RPA-for-Amazon-Shops
-# Power-Automate-RPA-for-Amazon-Shops
+# 
